@@ -309,6 +309,12 @@
                 
               }
               .form-group{
+                  .checkbox{
+                      margin:0;
+                      label{
+                          margin:0;
+                      }
+                  }
                 .checkbox label::before, .checkbox label::after {
                     border: 1px solid $color-primary;
                     width: 20px;
@@ -318,6 +324,68 @@
                 }
               }
             }
+          }
+          button.btn-toggle{
+            padding: 0;
+            position: relative;
+            border: none;
+            height: 1.2rem;
+            width: 3rem;
+            border-radius: 1.5rem;
+            background-color:$color-light;
+            margin-left: 30px;
+            &::after,
+            &:before{
+                line-height: 1.2rem;
+                width: 0.5rem;
+                text-align: center;
+                font-weight: 600;
+                font-size: 0.55rem;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                position: absolute;
+                bottom: 0;
+                transition: opacity 0.25s;
+                color: $color-white;
+                letter-spacing: 0.75px;
+                width: 2.325rem;
+            }
+            &:before {
+                content: 'Yes';
+                left: 0.4125rem;
+                text-align: right;
+              }
+            &:after {
+                content: 'No';
+                right: 0.5rem;
+                text-align: left;
+                opacity: 0;
+            }
+            .handle {
+                position: absolute;
+                top: 0.1875rem;
+                left: 0.1875rem;
+                width: 0.9rem;
+                height: 0.9rem;
+                border-radius: 1.125rem;
+                background: $color-white;
+                transition: left 0.25s;
+            }
+            &.active{
+                transition: background-color 0.25s;
+                background-color: $color-secondary;
+                .handle {
+                    left: 1.6875rem;
+                    transition: left 0.25s;
+                }
+                &:before {
+                    opacity: 0;
+                  }
+                &:after {
+                    opacity: 1;
+                  }
+            }
+              
           }
     }
 }

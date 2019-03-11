@@ -3079,12 +3079,78 @@ ul.pagination li.page-item.active a.page-link, ul.pagination li.page-item:hover 
   content: "";
   /* fa-chevron-up */
 }
+.project-form.accordion-form .cluster-accordion .card .form-group .checkbox {
+  margin: 0;
+}
+.project-form.accordion-form .cluster-accordion .card .form-group .checkbox label {
+  margin: 0;
+}
 .project-form.accordion-form .cluster-accordion .card .form-group .checkbox label::before, .project-form.accordion-form .cluster-accordion .card .form-group .checkbox label::after {
   border: 1px solid #8c909a;
   width: 20px;
   height: 20px;
   line-height: 20px;
   top: 5px;
+}
+.project-form.accordion-form button.btn-toggle {
+  padding: 0;
+  position: relative;
+  border: none;
+  height: 1.2rem;
+  width: 3rem;
+  border-radius: 1.5rem;
+  background-color: #27293D;
+  margin-left: 30px;
+}
+.project-form.accordion-form button.btn-toggle::after, .project-form.accordion-form button.btn-toggle:before {
+  line-height: 1.2rem;
+  width: 0.5rem;
+  text-align: center;
+  font-weight: 600;
+  font-size: 0.55rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: absolute;
+  bottom: 0;
+  transition: opacity 0.25s;
+  color: #ffffff;
+  letter-spacing: 0.75px;
+  width: 2.325rem;
+}
+.project-form.accordion-form button.btn-toggle:before {
+  content: "Yes";
+  left: 0.4125rem;
+  text-align: right;
+}
+.project-form.accordion-form button.btn-toggle:after {
+  content: "No";
+  right: 0.5rem;
+  text-align: left;
+  opacity: 0;
+}
+.project-form.accordion-form button.btn-toggle .handle {
+  position: absolute;
+  top: 0.1875rem;
+  left: 0.1875rem;
+  width: 0.9rem;
+  height: 0.9rem;
+  border-radius: 1.125rem;
+  background: #ffffff;
+  transition: left 0.25s;
+}
+.project-form.accordion-form button.btn-toggle.active {
+  transition: background-color 0.25s;
+  background-color: #00A890;
+}
+.project-form.accordion-form button.btn-toggle.active .handle {
+  left: 1.6875rem;
+  transition: left 0.25s;
+}
+.project-form.accordion-form button.btn-toggle.active:before {
+  opacity: 0;
+}
+.project-form.accordion-form button.btn-toggle.active:after {
+  opacity: 1;
 }
 
 /*# sourceMappingURL=style.css.map */
