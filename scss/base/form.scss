@@ -205,6 +205,7 @@
             textarea{
                 min-height: 200px;
             }
+            
             .target{
                 @include flexjust;
                 justify-content: flex-start;
@@ -231,7 +232,18 @@
                     display: none;
                 }
             }
-	
+            &.target-group{
+                position: relative;
+                button.add-unit{
+                    position: absolute;
+                    right:0;
+                    bottom:0;
+                    border:1px solid $color-primary;
+                    background-color: transparent;
+                    color:$color-orange;
+                    @include radius50;
+                }
+            }
         }
     }
 }

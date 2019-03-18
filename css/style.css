@@ -3007,6 +3007,21 @@ ul.pagination li.page-item.active a.page-link, ul.pagination li.page-item:hover 
 .project-form form .form-group .select2-container--default .select2-selection--single .select2-selection__arrow {
   display: none;
 }
+.project-form form .form-group.target-group {
+  position: relative;
+}
+.project-form form .form-group.target-group button.add-unit {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  border: 1px solid #8c909a;
+  background-color: transparent;
+  color: #E69A34;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+}
 
 .custom-upload {
   position: relative;
